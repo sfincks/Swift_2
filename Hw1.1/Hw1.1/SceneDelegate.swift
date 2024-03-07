@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  app development on swift
+//  Hw1.1
 //
-//  Created by sfincks on 04.03.2024.
+//  Created by sfincks on 07.03.2024.
 //
 
 import UIKit
