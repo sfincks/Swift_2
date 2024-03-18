@@ -8,10 +8,16 @@
 import Foundation
 import UIKit
 
-final class FriendsView: UITableViewCell {
+final class CustomTableCell: UITableViewCell {
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .clear
+        setupViews()
+    }
     
     required init?(coder: NSCoder) {
-        fatalError()
+        fatalError("init(coder:) has not been implemented")
     }
     
     private var friendPortrait: UIView {

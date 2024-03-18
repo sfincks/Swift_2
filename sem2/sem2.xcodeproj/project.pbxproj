@@ -16,7 +16,10 @@
 		DE707CD32BA1ACAD00689E7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE707CD22BA1ACAD00689E7D /* ViewController.swift */; };
 		DE707CD82BA1ACBB00689E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE707CD72BA1ACBB00689E7D /* Assets.xcassets */; };
 		DE707CDB2BA1ACBB00689E7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE707CD92BA1ACBB00689E7D /* LaunchScreen.storyboard */; };
-		DED513002BA845630036FF7C /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED512FF2BA845630036FF7C /* FriendsView.swift */; };
+		DEA738BD2BA874BA00F23603 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA738BC2BA874BA00F23603 /* CollectionViewController.swift */; };
+		DEA738BF2BA8763A00F23603 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA738BE2BA8763A00F23603 /* CustomCollectionViewCell.swift */; };
+		DEA738C22BA8C5DD00F23603 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA738C12BA8C5DD00F23603 /* ImageViewController.swift */; };
+		DED513002BA845630036FF7C /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED512FF2BA845630036FF7C /* CustomTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +34,10 @@
 		DE707CD72BA1ACBB00689E7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE707CDA2BA1ACBB00689E7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE707CDC2BA1ACBB00689E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DED512FF2BA845630036FF7C /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		DEA738BC2BA874BA00F23603 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		DEA738BE2BA8763A00F23603 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		DEA738C12BA8C5DD00F23603 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		DED512FF2BA845630036FF7C /* CustomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +78,12 @@
 				DE707CDC2BA1ACBB00689E7D /* Info.plist */,
 				DE43DAA02BA1EC4600D4A3D3 /* NewViewController.swift */,
 				DE43DAA22BA1F0AE00D4A3D3 /* TableViewController.swift */,
-				DED512FF2BA845630036FF7C /* FriendsView.swift */,
+				DED512FF2BA845630036FF7C /* CustomTableCell.swift */,
 				DE2660272BA84A2E00DF38B3 /* GroupView.swift */,
 				DE2660292BA84A4300DF38B3 /* PhotosView.swift */,
+				DEA738BC2BA874BA00F23603 /* CollectionViewController.swift */,
+				DEA738BE2BA8763A00F23603 /* CustomCollectionViewCell.swift */,
+				DEA738C12BA8C5DD00F23603 /* ImageViewController.swift */,
 			);
 			path = sem2;
 			sourceTree = "<group>";
@@ -149,13 +158,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED513002BA845630036FF7C /* FriendsView.swift in Sources */,
+				DEA738BD2BA874BA00F23603 /* CollectionViewController.swift in Sources */,
+				DEA738BF2BA8763A00F23603 /* CustomCollectionViewCell.swift in Sources */,
+				DED513002BA845630036FF7C /* CustomTableCell.swift in Sources */,
 				DE707CD32BA1ACAD00689E7D /* ViewController.swift in Sources */,
 				DE2660282BA84A2E00DF38B3 /* GroupView.swift in Sources */,
 				DE26602A2BA84A4300DF38B3 /* PhotosView.swift in Sources */,
 				DE707CCF2BA1ACAD00689E7D /* AppDelegate.swift in Sources */,
 				DE707CD12BA1ACAD00689E7D /* SceneDelegate.swift in Sources */,
 				DE43DAA32BA1F0AE00D4A3D3 /* TableViewController.swift in Sources */,
+				DEA738C22BA8C5DD00F23603 /* ImageViewController.swift in Sources */,
 				DE43DAA12BA1EC4600D4A3D3 /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

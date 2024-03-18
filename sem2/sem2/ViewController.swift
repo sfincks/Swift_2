@@ -15,10 +15,10 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         
 //        button.addTarget(self, action: #selector(tap), for: .touchUpInside)
-//        button1.addTarget(self, action: #selector(tap1), for: .touchUpInside)
+        button1.addTarget(self, action: #selector(tap3), for: .touchUpInside)
         button2.addTarget(self, action: #selector(tap2), for: .touchUpInside)
         setupViews()
-        button3.addTarget(self, action: #selector(tapFriends), for: .touchUpInside)
+//        button3.addTarget(self, action: #selector(tapFriends), for: .touchUpInside)
 //        makelabel()
 //        makebutton()
     }
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     }()
     private var button1: UIButton = {
         var button = UIButton()
-        button.setTitle("Изменить цвет экрана", for: .normal)
+        button.setTitle("Перейти на CollectionViewController", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
         return button
@@ -82,13 +82,13 @@ class ViewController: UIViewController {
         button.backgroundColor = .blue
         return button
     }()
-    private var button3: UIButton = {
-        var button = UIButton()
-        button.setTitle("Перейти на FriendsView", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
-        return button
-    }()
+//    private var button3: UIButton = {
+//        var button = UIButton()
+//        button.setTitle("Перейти на FriendsView", for: .normal)
+//        button.setTitleColor(.white, for: .normal)
+//        button.backgroundColor = .blue
+//        return button
+//    }()
    
     private func setupViews(){
         view.addSubview(label)
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         view.addSubview(button)
         view.addSubview(button1)
         view.addSubview(button2)
-        view.addSubview(button3)
+//        view.addSubview(button3)
         setupConstraints()
     }
     private func setupConstraints(){
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button1.translatesAutoresizingMaskIntoConstraints = false
         button2.translatesAutoresizingMaskIntoConstraints = false
-        button3.translatesAutoresizingMaskIntoConstraints = false
+//        button3.translatesAutoresizingMaskIntoConstraints = false
 
         
         NSLayoutConstraint.activate([
@@ -148,10 +148,10 @@ class ViewController: UIViewController {
             button2.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             button2.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
-            button3.topAnchor.constraint(equalTo: button2.bottomAnchor, constant: 20),
-            button3.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button3.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            button3.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            button3.topAnchor.constraint(equalTo: button2.bottomAnchor, constant: 20),
+//            button3.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            button3.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            button3.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
         ])
     }
@@ -184,8 +184,9 @@ private extension ViewController{
     @objc func tap2(){
         navigationController?.pushViewController(TableViewController(), animated: true)
     }
-    
-    @objc func tapFriends(){
-        navigationController?.pushViewController(FriendsView(coder: <#NSCoder#>) ?? <#default value#>, animated: true)
+    @objc func tap3(){
+        let controller = CollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(controller, animated: true)
     }
+    
 }
