@@ -19,6 +19,7 @@ class FriendsMenu: UITableViewController {
         navigationController?.navigationBar.barTintColor = .cyan
         button1.addTarget(self, action: #selector(FriendTap), for: .touchUpInside)
         button2.addTarget(self, action: #selector(GroupTap), for: .touchUpInside)
+        button3.addTarget(self, action: #selector(PhotoTap), for: .touchUpInside)
         setupViews()
     }
     
@@ -122,7 +123,7 @@ private extension FriendsMenu {
         @objc func GroupTap(){
             navigationController?.pushViewController(GroupsMenu(), animated: true)
         }
-    //    @objc func PhotoTap(){
-    //        navigationController?.pushViewController(PhotosMenu(), animated: true)
-    //    }
+        @objc func PhotoTap(){
+            navigationController?.pushViewController(PhotosMenu(), animated: true)
+        }
 }
