@@ -12,6 +12,11 @@
 		75FB861F2BB031CB00503E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB861E2BB031CB00503E74 /* ViewController.swift */; };
 		75FB86242BB031CC00503E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75FB86232BB031CC00503E74 /* Assets.xcassets */; };
 		75FB86272BB031CC00503E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75FB86252BB031CC00503E74 /* LaunchScreen.storyboard */; };
+		75FB86312BB039C400503E74 /* FriendsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86302BB039C400503E74 /* FriendsMenu.swift */; };
+		75FB86332BB0447100503E74 /* GroupsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86322BB0447100503E74 /* GroupsMenu.swift */; };
+		75FB86352BB044B200503E74 /* PhotosMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86342BB044B200503E74 /* PhotosMenu.swift */; };
+		75FB86372BB0465D00503E74 /* ChatMenuBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86362BB0465D00503E74 /* ChatMenuBase.swift */; };
+		75FB86392BB0482F00503E74 /* FriendsMenuBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86382BB0482F00503E74 /* FriendsMenuBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		75FB86232BB031CC00503E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75FB86262BB031CC00503E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75FB86282BB031CC00503E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75FB86302BB039C400503E74 /* FriendsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMenu.swift; sourceTree = "<group>"; };
+		75FB86322BB0447100503E74 /* GroupsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsMenu.swift; sourceTree = "<group>"; };
+		75FB86342BB044B200503E74 /* PhotosMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMenu.swift; sourceTree = "<group>"; };
+		75FB86362BB0465D00503E74 /* ChatMenuBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMenuBase.swift; sourceTree = "<group>"; };
+		75FB86382BB0482F00503E74 /* FriendsMenuBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMenuBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				75FB86232BB031CC00503E74 /* Assets.xcassets */,
 				75FB86252BB031CC00503E74 /* LaunchScreen.storyboard */,
 				75FB86282BB031CC00503E74 /* Info.plist */,
+				75FB86302BB039C400503E74 /* FriendsMenu.swift */,
+				75FB86382BB0482F00503E74 /* FriendsMenuBase.swift */,
+				75FB86322BB0447100503E74 /* GroupsMenu.swift */,
+				75FB86362BB0465D00503E74 /* ChatMenuBase.swift */,
+				75FB86342BB044B200503E74 /* PhotosMenu.swift */,
 			);
 			path = swift_2_final;
 			sourceTree = "<group>";
@@ -134,7 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FB86312BB039C400503E74 /* FriendsMenu.swift in Sources */,
+				75FB86352BB044B200503E74 /* PhotosMenu.swift in Sources */,
 				75FB861F2BB031CB00503E74 /* ViewController.swift in Sources */,
+				75FB86392BB0482F00503E74 /* FriendsMenuBase.swift in Sources */,
+				75FB86332BB0447100503E74 /* GroupsMenu.swift in Sources */,
+				75FB86372BB0465D00503E74 /* ChatMenuBase.swift in Sources */,
 				75FB861B2BB031CB00503E74 /* AppDelegate.swift in Sources */,
 				75FB861D2BB031CB00503E74 /* SceneDelegate.swift in Sources */,
 			);
