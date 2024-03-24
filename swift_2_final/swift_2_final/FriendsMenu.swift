@@ -17,6 +17,8 @@ class FriendsMenu: UITableViewController {
         title = "Friends"
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = .cyan
+        button1.addTarget(self, action: #selector(FriendTap), for: .touchUpInside)
+        button2.addTarget(self, action: #selector(GroupTap), for: .touchUpInside)
         setupViews()
     }
     
@@ -31,16 +33,42 @@ class FriendsMenu: UITableViewController {
 //        label.layer.zPosition = 1
         return label
     }()
-    
+    private var button1: UIButton = {
+        let button = UIButton()
+        button.setTitle("Friends", for: .normal)
+        button.setTitleColor(.white, for: .highlighted)
+        button.backgroundColor = .cyan
+        return button
+    }()
+    private var button2: UIButton = {
+        let button = UIButton()
+        button.setTitle("Groups", for: .normal)
+        button.setTitleColor(.white, for: .highlighted)
+        button.backgroundColor = .purple
+        return button
+    }()
+    private var button3: UIButton = {
+        let button = UIButton()
+        button.setTitle("Photos", for: .normal)
+        button.setTitleColor(.white, for: .highlighted)
+        button.backgroundColor = .red
+        return button
+    }()
     private func setupViews(){
         view.addSubview(label)
+        view.addSubview(button1)
+        view.addSubview(button2)
+        view.addSubview(button3)
         
         setupConstraints()
     }
     
     private func setupConstraints(){
         label.translatesAutoresizingMaskIntoConstraints = false
-        
+        button1.translatesAutoresizingMaskIntoConstraints = false
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        button3.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
         
             label.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: 20),
@@ -48,8 +76,22 @@ class FriendsMenu: UITableViewController {
             label.heightAnchor.constraint(equalToConstant: view.frame.size.height/8),
             label.widthAnchor.constraint(equalTo: view.widthAnchor),
             
+            button1.centerYAnchor.constraint(equalTo: label.centerYAnchor),
+//            button1.leadingAnchor.constraint(equalTo: label.trailingAnchor,constant: 20),
+            button1.trailingAnchor.constraint(equalTo: button2.leadingAnchor,constant: -40),
+            button1.widthAnchor.constraint(equalToConstant: view.frame.size.width/6),
+            button1.heightAnchor.constraint(equalToConstant: view.frame.size.width/8),
             
+            button2.centerYAnchor.constraint(equalTo: label.centerYAnchor),
+            button2.centerXAnchor.constraint(equalTo: label.centerXAnchor),
+            button2.widthAnchor.constraint(equalToConstant: view.frame.size.width/6),
+            button2.heightAnchor.constraint(equalToConstant: view.frame.size.width/8),
             
+            button3.centerYAnchor.constraint(equalTo: label.centerYAnchor),
+            button3.leadingAnchor.constraint(equalTo: button2.trailingAnchor,constant: 40),
+//            button3.trailingAnchor.constraint(equalTo: button2.leadingAnchor,constant: -40),
+            button3.widthAnchor.constraint(equalToConstant: view.frame.size.width/6),
+            button3.heightAnchor.constraint(equalToConstant: view.frame.size.width/8),
         ])
     }
     
@@ -72,4 +114,15 @@ class FriendsMenu: UITableViewController {
     
     
     
+}
+private extension FriendsMenu {
+    @objc func FriendTap(){
+            navigationController?.pushViewController(FriendsMenu(), animated: true)
+        }
+        @objc func GroupTap(){
+            navigationController?.pushViewController(GroupsMenu(), animated: true)
+        }
+    //    @objc func PhotoTap(){
+    //        navigationController?.pushViewController(PhotosMenu(), animated: true)
+    //    }
 }
