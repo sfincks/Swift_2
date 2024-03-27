@@ -17,7 +17,6 @@
 		75FB86352BB044B200503E74 /* PhotosMenuBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86342BB044B200503E74 /* PhotosMenuBase.swift */; };
 		75FB86372BB0465D00503E74 /* GroupsMenuBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86362BB0465D00503E74 /* GroupsMenuBase.swift */; };
 		75FB86392BB0482F00503E74 /* FriendsMenuBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86382BB0482F00503E74 /* FriendsMenuBase.swift */; };
-		75FB863B2BB06DCB00503E74 /* Taps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB863A2BB06DCB00503E74 /* Taps.swift */; };
 		75FB863D2BB08BD600503E74 /* ImageMenuForPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB863C2BB08BD600503E74 /* ImageMenuForPhotos.swift */; };
 		75FB86412BB08E7400503E74 /* PhotosMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB86402BB08E7400503E74 /* PhotosMenu.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,6 @@
 		75FB86342BB044B200503E74 /* PhotosMenuBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMenuBase.swift; sourceTree = "<group>"; };
 		75FB86362BB0465D00503E74 /* GroupsMenuBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsMenuBase.swift; sourceTree = "<group>"; };
 		75FB86382BB0482F00503E74 /* FriendsMenuBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMenuBase.swift; sourceTree = "<group>"; };
-		75FB863A2BB06DCB00503E74 /* Taps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taps.swift; sourceTree = "<group>"; };
 		75FB863C2BB08BD600503E74 /* ImageMenuForPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMenuForPhotos.swift; sourceTree = "<group>"; };
 		75FB86402BB08E7400503E74 /* PhotosMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +73,6 @@
 				75FB861E2BB031CB00503E74 /* ViewController.swift */,
 				75FB86232BB031CC00503E74 /* Assets.xcassets */,
 				75FB86252BB031CC00503E74 /* LaunchScreen.storyboard */,
-				75FB863A2BB06DCB00503E74 /* Taps.swift */,
 				75FB86282BB031CC00503E74 /* Info.plist */,
 				75FB86302BB039C400503E74 /* FriendsMenu.swift */,
 				75FB86382BB0482F00503E74 /* FriendsMenuBase.swift */,
@@ -115,7 +112,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = 123;
 				TargetAttributes = {
 					75FB86162BB031CB00503E74 = {
@@ -166,7 +163,6 @@
 				75FB86332BB0447100503E74 /* GroupsMenu.swift in Sources */,
 				75FB86372BB0465D00503E74 /* GroupsMenuBase.swift in Sources */,
 				75FB861B2BB031CB00503E74 /* AppDelegate.swift in Sources */,
-				75FB863B2BB06DCB00503E74 /* Taps.swift in Sources */,
 				75FB861D2BB031CB00503E74 /* SceneDelegate.swift in Sources */,
 				75FB863D2BB08BD600503E74 /* ImageMenuForPhotos.swift in Sources */,
 			);
@@ -212,6 +208,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -272,6 +269,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

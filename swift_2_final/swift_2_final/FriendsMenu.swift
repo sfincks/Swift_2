@@ -17,7 +17,7 @@ class FriendsMenu: UITableViewController {
         title = "Friends"
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = .cyan
-        button1.addTarget(self, action: #selector(FriendTap), for: .touchUpInside)
+//        button1.addTarget(self, action: #selector(FriendTap), for: .touchUpInside)
         button2.addTarget(self, action: #selector(GroupTap), for: .touchUpInside)
         button3.addTarget(self, action: #selector(PhotoTap), for: .touchUpInside)
         setupViews()
@@ -117,13 +117,14 @@ class FriendsMenu: UITableViewController {
     
 }
 private extension FriendsMenu {
-    @objc func FriendTap(){
-            navigationController?.pushViewController(FriendsMenu(), animated: true)
-        }
+//    @objc func FriendTap(){
+//            navigationController?.pushViewController(FriendsMenu(), animated: true)
+//        }
         @objc func GroupTap(){
             navigationController?.pushViewController(GroupsMenu(), animated: true)
         }
         @objc func PhotoTap(){
-            navigationController?.pushViewController(PhotosMenu(), animated: true)
+            let controller = PhotosMenu(collectionViewLayout: UICollectionViewFlowLayout())
+            navigationController?.pushViewController(controller, animated: true)
         }
 }
