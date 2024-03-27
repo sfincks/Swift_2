@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
-   
+    // подключил свой аккаунт через сгенерированный токен и id своей страницы в вк, вставил в network service и все работает/ подгружались мои беседы группы и картинки но пока только в консоль)
+    private lazy var webView: WKWebView = {
+        let webView = WKWebView(frame: view.bounds)
+        webView.navigationDelegate = self
+        return webView
+    }()
     
     private var label: UILabel = {
         let label = UILabel()
@@ -21,29 +27,6 @@ class ViewController: UIViewController {
         return label
     }()
     
-//    private var loginField: UITextField = {
-//        let login = UITextField()
-//        login.borderStyle = .line
-//        login.layer.borderWidth = 1
-//        login.layer.borderColor = UIColor.black.cgColor
-//        login.textColor = .black
-//        let placeholderText = NSAttributedString(string: "Логин",
-//                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-//        login.attributedPlaceholder = placeholderText
-//        return login
-//    }()
-//
-//    private var passwordField: UITextField = {
-//        let password = UITextField()
-//        password.borderStyle = .line
-//        password.layer.borderWidth = 1
-//        password.layer.borderColor = UIColor.black.cgColor
-//        password.textColor = .black
-//        let placeholderText = NSAttributedString(string: "Пароль",
-//                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-//        password.attributedPlaceholder = placeholderText
-//        return password
-//    }()
     
     private var enterButton: UIButton = {
         let button = UIButton()
@@ -56,22 +39,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        enterButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
         setupViews()
+        
+        let url = URL(string: "https://oauth.vk.com/authorize?client_id=51888443&redirect_uri=https://oauth.vk.com/blank.html&display=mobile&response_type=token")
+        webView.load(URLRequest(url: url!))
+        
+        enterButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
     }
+    
     
     private func setupViews() {
         view.addSubview(label)
-//        view.addSubview(loginField)
-//        view.addSubview(passwordField)
         view.addSubview(enterButton)
         setupConstraints()
     }
 
     private func setupConstraints() {
         label.translatesAutoresizingMaskIntoConstraints = false
-//        loginField.translatesAutoresizingMaskIntoConstraints = false
-//        passwordField.translatesAutoresizingMaskIntoConstraints = false
         enterButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -86,16 +70,6 @@ class ViewController: UIViewController {
             enterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             enterButton.widthAnchor.constraint(equalToConstant: view.frame.size.width/6),
             enterButton.heightAnchor.constraint(equalToConstant: view.frame.size.width/8),
-            
-//            loginField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 30),
-//            loginField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-//            loginField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-//            loginField.heightAnchor.constraint(equalToConstant: 50),
-//
-//            passwordField.topAnchor.constraint(equalTo: loginField.bottomAnchor, constant: 10),
-//            passwordField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-//            passwordField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-//            passwordField.heightAnchor.constraint(equalToConstant: 50),
             
             
         ])
@@ -115,8 +89,6 @@ class ViewController: UIViewController {
 
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = controllers
-
-//        navigationController?.pushViewController(tabBarController, animated: true)
         
         guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let firstWindow = firstScene.windows.first else {
@@ -126,4 +98,26 @@ class ViewController: UIViewController {
         firstWindow.rootViewController =  tabBarController
     }
 }
-
+extension ViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment else {
+            decisionHandler(.allow)
+            return
+        }
+        let params = fragment
+            .components(separatedBy: "&")
+            .map { $0.components(separatedBy: "=") }
+            .reduce([String: String]()) { result, param in
+                var dict = result
+                let key = param[0]
+                let value = param[1]
+                dict[key] = value
+                return dict
+            }
+        NetworkService.token = params["access_token"]!
+        NetworkService.userID = params["user_id"]!
+        decisionHandler(.cancel)
+        webView.removeFromSuperview()
+        tap()
+    }
+}
