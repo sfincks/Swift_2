@@ -19,6 +19,7 @@
 		755465862BB41B40008AE080 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554657F2BB41B40008AE080 /* FriendCell.swift */; };
 		755465872BB41B40008AE080 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755465802BB41B40008AE080 /* Constants.swift */; };
 		755465882BB41B40008AE080 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755465812BB41B40008AE080 /* PhotosViewController.swift */; };
+		7554658D2BB42C81008AE080 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554658C2BB42C81008AE080 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7554657F2BB41B40008AE080 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendCell.swift; path = "../../../../Examples/GB.CreateApp.Homework1 — копия 2/GB.CreateApp.Homework1/FriendCell.swift"; sourceTree = "<group>"; };
 		755465802BB41B40008AE080 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "../../../../Examples/GB.CreateApp.Homework1 — копия 2/GB.CreateApp.Homework1/Constants.swift"; sourceTree = "<group>"; };
 		755465812BB41B40008AE080 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosViewController.swift; path = "../../../../Examples/GB.CreateApp.Homework1 — копия 2/GB.CreateApp.Homework1/PhotosViewController.swift"; sourceTree = "<group>"; };
+		7554658C2BB42C81008AE080 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +77,12 @@
 				755465702BB41AE6008AE080 /* LaunchScreen.storyboard */,
 				755465732BB41AE6008AE080 /* Info.plist */,
 				7554657C2BB41B40008AE080 /* FriendViewController.swift */,
-				7554657F2BB41B40008AE080 /* FriendCell.swift */,
 				7554657D2BB41B40008AE080 /* GroupsViewController.swift */,
-				7554657E2BB41B40008AE080 /* GroupCell.swift */,
 				755465812BB41B40008AE080 /* PhotosViewController.swift */,
+				7554657F2BB41B40008AE080 /* FriendCell.swift */,
+				7554657E2BB41B40008AE080 /* GroupCell.swift */,
 				7554657B2BB41B40008AE080 /* PhotoCell.swift */,
+				7554658C2BB42C81008AE080 /* ImageViewController.swift */,
 				755465802BB41B40008AE080 /* Constants.swift */,
 			);
 			path = swift_2_project;
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7554658D2BB42C81008AE080 /* ImageViewController.swift in Sources */,
 				755465852BB41B40008AE080 /* GroupCell.swift in Sources */,
 				755465822BB41B40008AE080 /* PhotoCell.swift in Sources */,
 				7554656A2BB41AE4008AE080 /* ViewController.swift in Sources */,
