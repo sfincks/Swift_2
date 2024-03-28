@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, WKNavigationDelegate {
     
     // 3.подключил свой аккаунт через сгенерированный токен и id своей страницы в вк, вставил в network service и все работает/ подгружались мои беседы группы и картинки но пока только в консоль) 4. удалось подключить все согласно записи семинара/ было особо сложно/ не сразу/но в итоге все подгрузилось 
     
@@ -39,7 +39,7 @@ class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = Theme.currentTheme.backgroundColor
         setupViews()
         
         let url = URL(string: "https://oauth.vk.com/authorize?client_id=51888443&redirect_uri=https://oauth.vk.com/blank.html&display=mobile&response_type=token")
@@ -98,8 +98,7 @@ class ViewController: UIViewController{
 
         firstWindow.rootViewController =  tabBarController
     }
-}
-extension ViewController: WKNavigationDelegate {
+    
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment else {
             decisionHandler(.allow)

@@ -24,6 +24,14 @@
 		7554659C2BB430EA008AE080 /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554659B2BB430EA008AE080 /* FriendsModel.swift */; };
 		755465A02BB430EF008AE080 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554659E2BB430EE008AE080 /* PhotosModel.swift */; };
 		755465A12BB430EF008AE080 /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554659F2BB430EF008AE080 /* GroupsModel.swift */; };
+		75B206602BB5D88F008DB8A0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B2065F2BB5D88F008DB8A0 /* Theme.swift */; };
+		75B206632BB5DAA5008DB8A0 /* ThemeSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B206622BB5DAA5008DB8A0 /* ThemeSaver.swift */; };
+		75B206662BB5DB61008DB8A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B206652BB5DB61008DB8A0 /* ProfileViewController.swift */; };
+		75B206692BB5DB99008DB8A0 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B206682BB5DB99008DB8A0 /* ThemeView.swift */; };
+		75B2066C2BB5DCB7008DB8A0 /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B2066B2BB5DCB7008DB8A0 /* FileCache.swift */; };
+		75B2066F2BB5DD04008DB8A0 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B2066E2BB5DD04008DB8A0 /* DateHelper.swift */; };
+		75B206722BB5DD32008DB8A0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B206712BB5DD32008DB8A0 /* UserModel.swift */; };
+		75B2067E2BB5F7E1008DB8A0 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75B2067C2BB5F7E1008DB8A0 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,14 @@
 		7554659B2BB430EA008AE080 /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		7554659E2BB430EE008AE080 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		7554659F2BB430EF008AE080 /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
+		75B2065F2BB5D88F008DB8A0 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		75B206622BB5DAA5008DB8A0 /* ThemeSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSaver.swift; sourceTree = "<group>"; };
+		75B206652BB5DB61008DB8A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		75B206682BB5DB99008DB8A0 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		75B2066B2BB5DCB7008DB8A0 /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
+		75B2066E2BB5DD04008DB8A0 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		75B206712BB5DD32008DB8A0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		75B2067D2BB5F7E1008DB8A0 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +112,14 @@
 				7554659B2BB430EA008AE080 /* FriendsModel.swift */,
 				7554659F2BB430EF008AE080 /* GroupsModel.swift */,
 				7554659E2BB430EE008AE080 /* PhotosModel.swift */,
+				75B206652BB5DB61008DB8A0 /* ProfileViewController.swift */,
+				75B206712BB5DD32008DB8A0 /* UserModel.swift */,
+				75B2066B2BB5DCB7008DB8A0 /* FileCache.swift */,
+				75B2067C2BB5F7E1008DB8A0 /* DataModel.xcdatamodeld */,
+				75B2065F2BB5D88F008DB8A0 /* Theme.swift */,
+				75B206622BB5DAA5008DB8A0 /* ThemeSaver.swift */,
+				75B206682BB5DB99008DB8A0 /* ThemeView.swift */,
+				75B2066E2BB5DD04008DB8A0 /* DateHelper.swift */,
 			);
 			path = swift_2_project;
 			sourceTree = "<group>";
@@ -169,20 +193,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B206692BB5DB99008DB8A0 /* ThemeView.swift in Sources */,
 				7554658D2BB42C81008AE080 /* ImageViewController.swift in Sources */,
 				755465852BB41B40008AE080 /* GroupCell.swift in Sources */,
+				75B206632BB5DAA5008DB8A0 /* ThemeSaver.swift in Sources */,
 				755465822BB41B40008AE080 /* PhotoCell.swift in Sources */,
 				7554656A2BB41AE4008AE080 /* ViewController.swift in Sources */,
 				755465A02BB430EF008AE080 /* PhotosModel.swift in Sources */,
+				75B206662BB5DB61008DB8A0 /* ProfileViewController.swift in Sources */,
 				755465862BB41B40008AE080 /* FriendCell.swift in Sources */,
+				75B2067E2BB5F7E1008DB8A0 /* DataModel.xcdatamodeld in Sources */,
 				755465842BB41B40008AE080 /* GroupsViewController.swift in Sources */,
+				75B206722BB5DD32008DB8A0 /* UserModel.swift in Sources */,
 				755465662BB41AE4008AE080 /* AppDelegate.swift in Sources */,
 				755465682BB41AE4008AE080 /* SceneDelegate.swift in Sources */,
+				75B2066F2BB5DD04008DB8A0 /* DateHelper.swift in Sources */,
+				75B206602BB5D88F008DB8A0 /* Theme.swift in Sources */,
 				7554659C2BB430EA008AE080 /* FriendsModel.swift in Sources */,
 				755465832BB41B40008AE080 /* FriendViewController.swift in Sources */,
 				755465872BB41B40008AE080 /* Constants.swift in Sources */,
 				755465A12BB430EF008AE080 /* GroupsModel.swift in Sources */,
 				755465922BB43076008AE080 /* NetworkService.swift in Sources */,
+				75B2066C2BB5DCB7008DB8A0 /* FileCache.swift in Sources */,
 				755465882BB41B40008AE080 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +407,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		75B2067C2BB5F7E1008DB8A0 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				75B2067D2BB5F7E1008DB8A0 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 75B2067D2BB5F7E1008DB8A0 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7554655A2BB41AE4008AE080 /* Project object */;
 }
