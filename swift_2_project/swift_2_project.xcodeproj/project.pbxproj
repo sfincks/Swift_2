@@ -24,7 +24,6 @@
 		7554659C2BB430EA008AE080 /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554659B2BB430EA008AE080 /* FriendsModel.swift */; };
 		755465A02BB430EF008AE080 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554659E2BB430EE008AE080 /* PhotosModel.swift */; };
 		755465A12BB430EF008AE080 /* GroupsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554659F2BB430EF008AE080 /* GroupsModel.swift */; };
-		75CFCE8F2BB4544500D3263D /* AppCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFCE8E2BB4544500D3263D /* AppCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		7554659B2BB430EA008AE080 /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		7554659E2BB430EE008AE080 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		7554659F2BB430EF008AE080 /* GroupsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsModel.swift; sourceTree = "<group>"; };
-		75CFCE8E2BB4544500D3263D /* AppCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +78,6 @@
 		755465642BB41AE4008AE080 /* swift_2_project */ = {
 			isa = PBXGroup;
 			children = (
-				75CFCE8D2BB4543400D3263D /* AppCode */,
 				755465652BB41AE4008AE080 /* AppDelegate.swift */,
 				755465672BB41AE4008AE080 /* SceneDelegate.swift */,
 				755465692BB41AE4008AE080 /* ViewController.swift */,
@@ -101,14 +98,6 @@
 				7554659E2BB430EE008AE080 /* PhotosModel.swift */,
 			);
 			path = swift_2_project;
-			sourceTree = "<group>";
-		};
-		75CFCE8D2BB4543400D3263D /* AppCode */ = {
-			isa = PBXGroup;
-			children = (
-				75CFCE8E2BB4544500D3263D /* AppCode.swift */,
-			);
-			path = AppCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +173,6 @@
 				755465852BB41B40008AE080 /* GroupCell.swift in Sources */,
 				755465822BB41B40008AE080 /* PhotoCell.swift in Sources */,
 				7554656A2BB41AE4008AE080 /* ViewController.swift in Sources */,
-				75CFCE8F2BB4544500D3263D /* AppCode.swift in Sources */,
 				755465A02BB430EF008AE080 /* PhotosModel.swift in Sources */,
 				755465862BB41B40008AE080 /* FriendCell.swift in Sources */,
 				755465842BB41B40008AE080 /* GroupsViewController.swift in Sources */,

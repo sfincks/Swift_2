@@ -1,8 +1,9 @@
 //
-//  FriendsModel.swift
-//  GB.CreateApp.Homework1
+//  AppDelegate.swift
+//  swift_2_final
 //
-//  Created by Анастасия Рябова on 04.07.2023.
+//  Created by Артур on 24.03.2024.
+//  Copyright © 2024 123. All rights reserved.
 //
 
 struct FriendsModel: Decodable {
@@ -18,11 +19,13 @@ struct Friend: Decodable {
     var firstName: String?
     var lastName: String?
     var photo: String?
+    var online: Int?
     
     enum CodingKeys: String, CodingKey {
         case id
         case firstName = "first_name"
         case lastName = "last_name"
         case photo = "photo_50"
+        case online
     }
 }

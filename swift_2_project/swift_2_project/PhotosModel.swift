@@ -1,8 +1,9 @@
 //
-//  PhotosModel.swift
-//  GB.CreateApp.Homework1
+//  AppDelegate.swift
+//  swift_2_final
 //
-//  Created by Анастасия Рябова on 04.07.2023.
+//  Created by Артур on 24.03.2024.
+//  Copyright © 2024 123. All rights reserved.
 //
 
 struct PhotosModel: Decodable {
