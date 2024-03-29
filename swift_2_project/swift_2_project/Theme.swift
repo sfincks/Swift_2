@@ -21,12 +21,6 @@ protocol AppTheme {
     var type: AllAppTheme { get }
 }
 
-extension AppTheme {
-    var subtitleTextColor: UIColor {
-        .gray
-    }
-}
-
 final class Theme {
     
     static var currentTheme: AppTheme = WhiteTheme()
@@ -49,3 +43,10 @@ final class PurpleTheme: AppTheme {
     var textColor: UIColor  = .green
     var type: AllAppTheme = .purple
 }
+
+extension AppTheme {
+    var subtitleTextColor: UIColor {
+        .gray
+    }
+}
+

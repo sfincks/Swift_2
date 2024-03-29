@@ -2,12 +2,28 @@
 //  NetworkService.swift
 //  swift_2_project
 //
-//  Created by Артур on 27.03.2024.
+//  Created by Артур on 24.03.2024.
+//  Copyright © 2024 123. All rights reserved.
 //
 
 import Foundation
 
-final class NetworkService {
+//protocol NetworkServiceProtocol {
+//    func getFriends()
+//}
+
+final class NetworkService {//}: NetworkServiceProtocol {
+    
+//    func getFriends() {
+//        self.getFriends()
+//    }
+    
+    
+//    private let friendViewController: FriendViewControllerProtocol
+    
+//    init(friendViewController: FriendViewControllerProtocol) {
+//        self.friendViewController = friendViewController
+//    }
     
     enum NetworkError: Error {
         case dataError

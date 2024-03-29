@@ -1,6 +1,6 @@
 //
-//  AppDelegate.swift
-//  swift_2_final
+//  PhotosModel.swift
+//  swift_2_project
 //
 //  Created by Артур on 24.03.2024.
 //  Copyright © 2024 123. All rights reserved.

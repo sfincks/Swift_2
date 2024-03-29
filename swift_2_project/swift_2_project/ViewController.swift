@@ -1,6 +1,6 @@
 //
-//  AppDelegate.swift
-//  swift_2_final
+//  ViewController.swift
+//  swift_2_project
 //
 //  Created by Артур on 24.03.2024.
 //  Copyright © 2024 123. All rights reserved.
@@ -9,10 +9,12 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate {
+class ViewController: UIViewController {
     
-    // 3.подключил свой аккаунт через сгенерированный токен и id своей страницы в вк, вставил в network service и все работает/ подгружались мои беседы группы и картинки но пока только в консоль) 4. удалось подключить все согласно записи семинара/ было особо сложно/ не сразу/но в итоге все подгрузилось 
-    
+    // 3.подключил свой аккаунт через сгенерированный токен и id своей страницы в вк, вставил в network service и все работает/ подгружались мои беседы группы и картинки но пока только в консоль) 4. удалось подключить все согласно записи семинара/ было особо сложно/ не сразу/но в итоге все подгрузилось/ 5-6 в итоге промучался пару дней? но понял как работатет и смог решить все ошибки
+    // пора писать диплом а не со свифтом возиться/ тем более джаву и андроид нам отрезали
+    // не могу понять абстрактные функции и как их реализовывать/ ни разу нигде не объяснили как это нормально делать// оч запутанно
+    //правда пытался настроить протоколы? но не понимаю как правильно это сделать/ всегда что-то не так
     private lazy var webView: WKWebView = {
         let webView = WKWebView(frame: view.bounds)
         webView.navigationDelegate = self
@@ -40,12 +42,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Theme.currentTheme.backgroundColor
-        setupViews()
-        
         let url = URL(string: "https://oauth.vk.com/authorize?client_id=51888443&redirect_uri=https://oauth.vk.com/blank.html&display=mobile&response_type=token")
         webView.load(URLRequest(url: url!))
-        
         enterButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        setupViews()
     }
     
     
@@ -74,30 +74,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
             
             
         ])
-    }
+    }    
     
-    @objc private func tap() {
-        
-        let tab1 = UINavigationController(rootViewController: FriendViewController())
-        let tab2 = UINavigationController(rootViewController: GroupsViewController())
-        let tab3 = UINavigationController(rootViewController: PhotosViewController(collectionViewLayout: UICollectionViewFlowLayout()))
-
-        tab1.tabBarItem.title = "Friends"
-        tab2.tabBarItem.title = "Groups"
-        tab3.tabBarItem.title = "Photos"
-        
-        let controllers = [tab1, tab2, tab3]
-
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = controllers
-        
-        guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let firstWindow = firstScene.windows.first else {
-            return
-        }
-
-        firstWindow.rootViewController =  tabBarController
-    }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment else {
@@ -119,5 +97,30 @@ class ViewController: UIViewController, WKNavigationDelegate {
         decisionHandler(.cancel)
         webView.removeFromSuperview()
         tap()
+    }
+}
+
+extension ViewController: WKNavigationDelegate {
+    @objc private func tap() {
+        
+        let tab1 = UINavigationController(rootViewController: FriendViewController())
+        let tab2 = UINavigationController(rootViewController: GroupsViewController())
+        let tab3 = UINavigationController(rootViewController: PhotosViewController(collectionViewLayout: UICollectionViewFlowLayout()))
+
+        tab1.tabBarItem.title = "Friends"
+        tab2.tabBarItem.title = "Groups"
+        tab3.tabBarItem.title = "Photos"
+        
+        let controllers = [tab1, tab2, tab3]
+
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = controllers
+        
+        guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let firstWindow = firstScene.windows.first else {
+            return
+        }
+
+        firstWindow.rootViewController =  tabBarController
     }
 }

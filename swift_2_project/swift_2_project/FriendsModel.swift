@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  FriendsModel.swift
 //  swift_2_final
 //
 //  Created by Артур on 24.03.2024.

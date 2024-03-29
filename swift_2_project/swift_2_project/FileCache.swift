@@ -96,7 +96,7 @@ final class FileCache {
     }
     
     func addFriendDate() {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FriendDate")
+        _ = NSFetchRequest<NSFetchRequestResult>(entityName: "FriendDate")
         let date = FriendDate(context: persistentContainer.viewContext)
         date.date = Date()
         save()
@@ -111,7 +111,7 @@ final class FileCache {
     }
     
     func addGroupDate() {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GroupDate")
+        _ = NSFetchRequest<NSFetchRequestResult>(entityName: "GroupDate")
         let date = GroupDate(context: persistentContainer.viewContext)
         date.date = Date()
         save()

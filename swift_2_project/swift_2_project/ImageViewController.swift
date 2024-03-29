@@ -1,6 +1,6 @@
 //
-//  ImageMenuForPhotos.swift
-//  swift_2_final
+//  ImageViewController.swift
+//  swift_2_project
 //
 //  Created by Артур on 24.03.2024.
 //  Copyright © 2024 123. All rights reserved.
@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class ImageViewController: UIViewController{
+    
     private var imageView = UIImageView()
     
     init(image: UIImage){
